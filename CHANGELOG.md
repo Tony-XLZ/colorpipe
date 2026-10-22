@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Add `docs/REVERSE_ENGINEERING.md`: observed binary identity, dependency stack, module map, external interfaces and the measured DNG output contract of the studied converter. Documentation only; no shipped code, no vendor assets.
+
 ## 0.1.0
 
 First standalone public source package, exported from the optimized `perf-hifi` milestone.

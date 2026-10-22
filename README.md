@@ -68,6 +68,7 @@ python tools/validate_distribution.py dist/colorpipe-0.1.0.tar.gz dist/colorpipe
 
 - [Architecture](docs/ARCHITECTURE.md), [algorithm](docs/ALGORITHM.md), [validation history](docs/PROGRESS.md), [standalone package verification](docs/RELEASE.md)
 - [Metadata differences](docs/METADATA_DIFFERENCES.md), [limitations](docs/LIMITATIONS.md), [roadmap](docs/PLAN.md)
+- [Target reverse-engineering dossier](docs/REVERSE_ENGINEERING.md) — observed structure and DNG output contract of the studied converter (no vendor code or data)
 - [Performance](docs/PERFORMANCE.md), [building](docs/BUILDING.md), [contributing](CONTRIBUTING.md)
 - [MIT license](LICENSE), [third-party notices](THIRD_PARTY_NOTICES.md), [provenance](docs/LEGAL.md)
 
