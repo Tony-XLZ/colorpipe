@@ -1,0 +1,28 @@
+# fixtures (user-owned RAWs / DNGs)
+fixtures/
+*.orf
+*.ORF
+*.ori
+*.ORI
+*.dng
+*.DNG
+*.dcp
+*.DCP
+
+# build / env
+.venv/
+build/
+dist/
+*.egg-info/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.cache/
+fixtures.json
+.env
+.env.*
+!.env.example
+
+# outputs
+out/
+*.log

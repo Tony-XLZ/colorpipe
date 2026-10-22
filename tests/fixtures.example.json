@@ -1,0 +1,130 @@
+{
+  "note": "Copy to ignored fixtures.json and set local paths. Historical hashes/metadata require the same privately supplied images; replace expectations for other images.",
+  "fixtures": [
+    {
+      "name": "P7262257",
+      "path": "/path/to/photos/P7262257.ORF",
+      "sha256": "e0a3439a2d44180164fc7cf54d12e461bd31e6c4f92a566dd7e556c919514642",
+      "kind": "20mp_orf",
+      "expected": {
+        "width": 5220,
+        "height": 3912,
+        "processing_size": [
+          5216,
+          3908
+        ],
+        "black": [
+          254,
+          254,
+          254,
+          254
+        ],
+        "white": [
+          4095,
+          4095,
+          4095,
+          4095
+        ],
+        "valid_bits": 12,
+        "pattern": "RGGB",
+        "iso": 200,
+        "wb": [
+          2.75,
+          1.0,
+          1.4296875
+        ],
+        "pixel_scale": 2.0,
+        "camera_crop": [
+          12,
+          12,
+          5184,
+          3888
+        ]
+      }
+    },
+    {
+      "name": "P7262256_ori",
+      "path": "/path/to/photos/P7262256.ORI",
+      "sha256": "d9ab00b4f2a0e45c12e91540783594cb1d5c70ae10b5e99b467642100b22eca1",
+      "kind": "20mp_ori",
+      "note": "explicit task-order swap 6/7 in the reference; route B uses its own order",
+      "expected": {
+        "width": 5220,
+        "height": 3912,
+        "processing_size": [
+          5216,
+          3908
+        ],
+        "black": [
+          254,
+          254,
+          254,
+          254
+        ],
+        "white": [
+          4095,
+          4095,
+          4095,
+          4095
+        ],
+        "valid_bits": 12,
+        "pattern": "RGGB",
+        "iso": 200,
+        "wb": [
+          2.3046875,
+          1.0,
+          1.734375
+        ],
+        "pixel_scale": 2.0,
+        "camera_crop": [
+          12,
+          12,
+          5184,
+          3888
+        ]
+      }
+    },
+    {
+      "name": "P7262256_50mp",
+      "path": "/path/to/photos/P7262256.ORF",
+      "sha256": "5efdb2b1b61fb6f29e4fe7e3d0a737f36e7f56456071461355592d6a014a4a60",
+      "kind": "50mp_orf",
+      "expected": {
+        "width": 8172,
+        "height": 6132,
+        "processing_size": [
+          8168,
+          6128
+        ],
+        "black": [
+          1016,
+          1016,
+          1016,
+          1016
+        ],
+        "white": [
+          16383,
+          16383,
+          16383,
+          16383
+        ],
+        "valid_bits": 14,
+        "pattern": "RGGB",
+        "iso": 200,
+        "wb": [
+          2.3046875,
+          1.0,
+          1.734375
+        ],
+        "pixel_scale": 2.0,
+        "camera_crop": [
+          6,
+          6,
+          8160,
+          6120
+        ]
+      }
+    }
+  ],
+  "output_root": "out/validation"
+}

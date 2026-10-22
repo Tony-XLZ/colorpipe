@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "colorpipe"
+version = "0.1.0"
+description = "Deterministic OM-1 Mark II ORF/ORI to camera-linear DNG converter"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+requires-python = ">=3.11"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+]
+dependencies = [
+  "numpy>=2.0",
+  "rawpy>=0.20",
+]
+
+[project.optional-dependencies]
+# Retained for existing installation commands; decoding is now a default dependency.
+decode = ["rawpy>=0.20"]
+dev = ["pytest>=8", "scikit-image>=0.24", "tifffile>=2024.1", "Pillow>=10.1", "packaging>=24"]
+
+[project.scripts]
+orf2dng = "colorpipe.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Tony-XLZ/colorpipe"
+Issues = "https://github.com/Tony-XLZ/colorpipe/issues"
+Documentation = "https://github.com/Tony-XLZ/colorpipe#readme"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
