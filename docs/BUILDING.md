@@ -59,10 +59,11 @@ INSTALL_PYTHON="$(pwd)/.cache/install-venv/bin/python"
 mkdir -p .cache/sdist
 tar -xf dist/colorpipe-0.1.0.tar.gz -C .cache/sdist
 cd .cache/sdist/colorpipe-0.1.0
+mkdir -p .cache
 COLORPIPE_TEST_INSTALLED=1 "$INSTALL_PYTHON" -I -m pytest -q --ignore=tests/integration --basetemp=.cache/installed-pytest
 ```
 
-Windows 将 `$installPython` 设为安装环境的绝对解释器路径，并设置 `$env:COLORPIPE_TEST_INSTALLED='1'`。该变量关闭 conftest 的 src 注入，确保测试已安装的 wheel；测试辅助文件仍来自 sdist。不要使用 editable 安装或 PYTHONPATH 替代这一步。
+Windows 将 `$installPython` 设为安装环境的绝对解释器路径，并设置 `$env:COLORPIPE_TEST_INSTALLED='1'`。进入解压目录后先执行 `New-Item -ItemType Directory -Force .cache | Out-Null`，因为 pytest 的 basetemp 不会自动创建缺失的父目录。该环境变量关闭 conftest 的 src 注入，确保测试已安装的 wheel；测试辅助文件仍来自 sdist。不要使用 editable 安装或 PYTHONPATH 替代这一步。
 
 ## 可选真实图像回归
 

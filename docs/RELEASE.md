@@ -14,6 +14,10 @@
 
 完整 JUnit、阶段报告、归档检查和绑定记录保存在本地忽略目录 `out/`，不公开用户图像或参考资料。此摘要公开测试方法及结论；它不使私有真实基线变为可公开复现数据。构建命令和私有集成输入说明见 [BUILDING](BUILDING.md)。
 
+## GitHub CI
+
+GitHub 发布验证补充：首次远程矩阵的构建/归档检查通过，合成用例因新解压目录缺少 `.cache` 父目录而出现 fixture 初始化错误。现由工作流显式创建该目录，并同步修正安装包测试命令；生产模块、测试断言与数值门槛不变。远程 Windows/Linux × Python 3.11/3.14 的实际结果见 [GitHub Actions](https://github.com/Tony-XLZ/colorpipe/actions/workflows/ci.yml)，这些合成结果不扩展为跨平台真实图像验收。
+
 ## 输出身份
 
 | 样本 | 最终 DNG SHA256 |

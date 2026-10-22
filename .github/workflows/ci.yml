@@ -36,4 +36,4 @@ jobs:
           python -I -m colorpipe --version
           orf2dng --help
           python -c "import tarfile; tarfile.open('dist/colorpipe-0.1.0.tar.gz').extractall('.cache/sdist', filter='data')"
-          python -c "import subprocess, sys; subprocess.check_call([sys.executable, '-I', '-m', 'pytest', '-q', '--ignore=tests/integration', '--basetemp=.cache/pytest'], cwd='.cache/sdist/colorpipe-0.1.0')"
+          python -c "from pathlib import Path; import subprocess, sys; root = Path('.cache/sdist/colorpipe-0.1.0'); (root / '.cache').mkdir(exist_ok=True); subprocess.check_call([sys.executable, '-I', '-m', 'pytest', '-q', '--ignore=tests/integration', '--basetemp=.cache/pytest'], cwd=root)"
