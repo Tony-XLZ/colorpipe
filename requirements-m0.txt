@@ -1,0 +1,17 @@
+# Tested M0-M4/P1 development environment: CPython 3.14.0, Windows x64.
+# Install these first, then: python -m pip install --no-deps -e .
+colorama==0.4.6
+ImageIO==2.38.1
+iniconfig==2.3.1
+lazy-loader==0.6
+networkx==3.7
+numpy==2.5.4
+packaging==26.3
+pillow==13.0.0
+pluggy==1.7.0
+Pygments==2.21.0
+pytest==9.1.1
+rawpy==0.27.1
+scikit-image==0.26.0
+scipy==1.18.1
+tifffile==2026.10.15
